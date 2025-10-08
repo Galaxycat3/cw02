@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'details_screen.dart';
+import 'dart:math';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -45,21 +46,45 @@ class HomeScreen extends StatelessWidget {
     },
   ];
 
+  final List<Color> pastelColors = const [
+    Color(0xFFB8EBD0), // Mint green
+    Color(0xFFFFC1CC), // Baby pink
+    Color(0xFFBEE3F8), // Baby blue
+    Color(0xFFE6E6FA), // Light lavender
+    Color(0xFFF5F5DC), // Beige
+    Color(0xFFFFF9B0), // Light yellow
+  ];
+
   @override
   Widget build(BuildContext context) {
+    final random = Random();
+
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Recipe Book'),
+        backgroundColor: Colors.pinkAccent.shade100,
       ),
       body: ListView.builder(
         itemCount: recipes.length,
         itemBuilder: (context, index) {
           final recipe = recipes[index];
+          final cardColor = pastelColors[index % pastelColors.length];
+          // Use index % length to rotate colors instead of true randomness
           return Card(
+            color: cardColor,
             margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             elevation: 3,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
             child: ListTile(
-              title: Text(recipe['title']),
+              title: Text(
+                recipe['title'],
+                style: const TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
               trailing: const Icon(Icons.arrow_forward_ios, size: 16),
               onTap: () {
                 Navigator.push(
@@ -73,6 +98,7 @@ class HomeScreen extends StatelessWidget {
           );
         },
       ),
+      backgroundColor: Colors.white70,
     );
   }
 }
