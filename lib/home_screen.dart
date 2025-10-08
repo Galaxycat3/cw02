@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'details_screen.dart';
-import 'dart:math';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -44,6 +43,45 @@ class HomeScreen extends StatelessWidget {
       'instructions':
           '1. Chop vegetables.\n2. Stir-fry with garlic and ginger.\n3. Add soy sauce.\n4. Serve hot with rice.',
     },
+    {
+      'title': 'Pancakes',
+      'ingredients': [
+        'Flour',
+        'Milk',
+        'Eggs',
+        'Baking Powder',
+        'Sugar',
+        'Butter'
+      ],
+      'instructions':
+          '1. Mix dry ingredients.\n2. Whisk in milk and eggs.\n3. Cook on skillet until golden brown.',
+    },
+    {
+      'title': 'Caprese Salad',
+      'ingredients': [
+        'Tomatoes',
+        'Mozzarella',
+        'Basil',
+        'Olive Oil',
+        'Salt',
+        'Pepper'
+      ],
+      'instructions':
+          '1. Slice tomatoes and mozzarella.\n2. Layer with basil.\n3. Drizzle with olive oil, salt, and pepper.',
+    },
+    {
+      'title': 'Chocolate Chip Cookies',
+      'ingredients': [
+        'Flour',
+        'Butter',
+        'Sugar',
+        'Eggs',
+        'Chocolate Chips',
+        'Vanilla Extract'
+      ],
+      'instructions':
+          '1. Mix butter and sugar.\n2. Add eggs and vanilla.\n3. Stir in flour and chocolate chips.\n4. Bake until golden.',
+    },
   ];
 
   final List<Color> pastelColors = const [
@@ -57,19 +95,16 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final random = Random();
-
     return Scaffold(
       appBar: AppBar(
         title: const Text('My Recipe Book'),
-        backgroundColor: Colors.pinkAccent.shade100,
+        backgroundColor: Colors.teal.shade200, // soft pastel teal
       ),
       body: ListView.builder(
         itemCount: recipes.length,
         itemBuilder: (context, index) {
           final recipe = recipes[index];
           final cardColor = pastelColors[index % pastelColors.length];
-          // Use index % length to rotate colors instead of true randomness
           return Card(
             color: cardColor,
             margin: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
