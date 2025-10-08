@@ -6,7 +6,7 @@ class HomeScreen extends StatelessWidget {
 
   final List<Map<String, dynamic>> recipes = const [
     {
-      'title': 'Spaghetti Carbonara',
+      'title': '🍝 Spaghetti Carbonara',
       'ingredients': [
         'Spaghetti',
         'Eggs',
@@ -18,7 +18,7 @@ class HomeScreen extends StatelessWidget {
           '1. Cook spaghetti.\n2. Fry pancetta.\n3. Mix eggs and cheese.\n4. Combine all and season with pepper.',
     },
     {
-      'title': 'Chicken Alfredo',
+      'title': '🍗 Chicken Alfredo',
       'ingredients': [
         'Fettuccine',
         'Chicken Breast',
@@ -31,7 +31,7 @@ class HomeScreen extends StatelessWidget {
           '1. Cook pasta.\n2. Sauté chicken.\n3. Add butter, garlic, and cream.\n4. Toss pasta with sauce and cheese.',
     },
     {
-      'title': 'Vegetable Stir Fry',
+      'title': '🥦 Vegetable Stir Fry',
       'ingredients': [
         'Broccoli',
         'Carrots',
@@ -44,7 +44,7 @@ class HomeScreen extends StatelessWidget {
           '1. Chop vegetables.\n2. Stir-fry with garlic and ginger.\n3. Add soy sauce.\n4. Serve hot with rice.',
     },
     {
-      'title': 'Pancakes',
+      'title': '🥞 Pancakes',
       'ingredients': [
         'Flour',
         'Milk',
@@ -57,7 +57,7 @@ class HomeScreen extends StatelessWidget {
           '1. Mix dry ingredients.\n2. Whisk in milk and eggs.\n3. Cook on skillet until golden brown.',
     },
     {
-      'title': 'Caprese Salad',
+      'title': '🍅 Caprese Salad',
       'ingredients': [
         'Tomatoes',
         'Mozzarella',
@@ -70,7 +70,7 @@ class HomeScreen extends StatelessWidget {
           '1. Slice tomatoes and mozzarella.\n2. Layer with basil.\n3. Drizzle with olive oil, salt, and pepper.',
     },
     {
-      'title': 'Chocolate Chip Cookies',
+      'title': '🍪 Chocolate Chip Cookies',
       'ingredients': [
         'Flour',
         'Butter',
